@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -10,22 +16,31 @@
 </head>
 <body>
 <div id="area">
-    <form action="" id="formulario">
+    <form action="processa.php" method="post" id="formulario">
         <fieldset>
         <legend><strong style="text-transform:uppercase;">REPORT</strong></legend> 
+        <?php
+
+            if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+
+
+        ?>
 
       
             <label for="nome"  class="tit">Nome Completo    </label>  
-            <input type="text"  id="nome"   required placeholder="Insira o nome Completo"class="linhas">
+            <input type="text"  name="nome" id="nome"   required placeholder="Insira o nome Completo"class="linhas">
            
      
             <label for="mail" class="tit">E-mail     </label> 
-            <input type="email"  id="mail"required placeholder="Insira o E-mail" class="linhas"> 
+            <input type="email"  name="email" id="mail"required placeholder="Insira o E-mail" class="linhas"> 
       
             <label for="date" class="tit" style="text-align:center">Data e Hora da Ofensa </label> 
             <div style="text-align:center">
-            <input type="date" name="date" id="date">
-            <input type="time" name="time" id="time">
+            <input type="date" name="date" id="date" required>
+            <input type="time" name="time" id="time" required>
             </div>
 
 
@@ -33,16 +48,16 @@
                 <label class="tit">O que causou a sua ofensa?<br></label>
              
                 <label>
-                    <input type="radio" name="hab" value="ofensa" > Uma piada
+                    <input type="radio" name="ofensa" value="ofensa" > Uma piada
                 </label>    
                 <label>
-                    <input type="radio" name="hab" value="ofensa"> Uma opinião
+                    <input type="radio" name="ofensa" value="ofensa"> Uma opinião
                 </label> 
                 <label>
-                    <input type="radio" name="hab" value="ofensa"> Uma noticia
+                    <input type="radio" name="ofensa" value="ofensa"> Uma noticia
                 </label> 
                 <label>
-                    <input type="radio" name="hab" value="ofensa"> Coisas no geral
+                    <input type="radio" name="ofensa" value="ofensa"> Coisas no geral
                 </label> 
             </div> 
 
@@ -51,10 +66,10 @@
                 <label class="tit">Foi necessário um lenço para limpar as lágrimas?<br></label>
              
                 <label>
-                    <input type="radio" name="hab" value="lagrimas" > SIM
+                    <input type="radio" name="lagrimas" value="lagrimas" > SIM
                 </label>    
                 <label>
-                    <input type="radio" name="hab" value="lagrimas"> NÃO
+                    <input type="radio" name="lagrimas" value="lagrimas"> NÃO
                 </label> 
                 
             </div>
@@ -63,13 +78,13 @@
                 <label class="tit">Acha que consegue esquecer o assunto?<br></label>
              
                 <label>
-                    <input type="radio" name="hab" value="esquecer" > Sim
+                    <input type="radio" name="esquecer" value="esquecer" > Sim
                 </label>    
                 <label>
-                    <input type="radio" name="hab" value="esquecer"> Não
+                    <input type="radio" name="esquecer" value="esquecer"> Não
                 </label> 
                 <label>
-                    <input type="radio" name="hab" value="esquecer"> Não tenho a certeza
+                    <input type="radio" name="esquecer" value="esquecer"> Não tenho a certeza
                 </label> 
                 
             </div>
@@ -78,38 +93,38 @@
                 <label class="tit">Razões que levaram à ofensa:<br></label>
              
                 <label>
-                    <input type="checkbox" name="hab" value="razoes" >Sou tótó
+                    <input type="checkbox" name="razoes" value="razoes" >Sou tótó
                 </label>    
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Sou um idiota
+                    <input type="checkbox" name="razoes" value="razoes">Sou um idiota
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Sou muito sensível
+                    <input type="checkbox" name="razoes" value="razoes">Sou muito sensível
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes" >Sou um falso puritano
+                    <input type="checkbox" name="razoes" value="razoes" >Sou um falso puritano
                 </label>    
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Sinto falta da minha mãe
+                    <input type="checkbox" name="razoes" value="razoes">Sinto falta da minha mãe
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Senti inveja de não ter de graça
+                    <input type="checkbox" name="razoes" value="razoes">Senti inveja de não ter de graça
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes" >Sou moralmente superior
+                    <input type="checkbox" name="razoes" value="razoes" >Sou moralmente superior
                 </label>    
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Enfiei a carapuça
+                    <input type="checkbox" name="razoes" value="razoes">Enfiei a carapuça
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Não tive likes
+                    <input type="checkbox" name="razoes" value="razoes">Não tive likes
                 </label> 
                 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">A minha vida é uma merda
+                    <input type="checkbox" name="razoes" value="razoes">A minha vida é uma merda
                 </label> 
                 <label>
-                    <input type="checkbox" name="hab" value="razoes">Outra(exlique me baixo):
+                    <input type="checkbox" name="razoes" value="razoes">Outra(exlique me baixo):
                 </label> 
                 
             </div>

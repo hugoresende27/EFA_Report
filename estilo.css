@@ -16,7 +16,7 @@
 body
 { 
     font-family:  'Lato', sans-serif;
-    background-color: var(--purple-cor);
+    background-color: var(--charcoal-cor);
     color: var(--green-cor);
     display: flex;          /*coloca tudo em linha*/
     flex-direction: column; /*coloca tudo em coluna*/
@@ -27,6 +27,8 @@ body
 
 form{
     width: 300px;
+    background-color: var(--purple-cor);
+    border-radius: 50px;
 }
 
 fieldset {
@@ -46,6 +48,7 @@ fieldset {
 
 legend {
     text-align: center;
+    margin-top: 50px;
 }
 
 input.linhas {
@@ -67,7 +70,6 @@ textarea{
     outline: 0;
     border-width: 0 0 1px;
     border-color: #000;
-    margin-bottom: 30px;
     background-color: transparent;
 }
 
@@ -100,6 +102,7 @@ button:active{
 
 .btn {
     text-align: center;
+    width: 300px;
 }
 select {
     background-color: rgb(219, 215, 215);

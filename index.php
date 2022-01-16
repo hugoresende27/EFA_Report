@@ -18,8 +18,8 @@
 <body>
 <div id="area">
     <form action="processa.php" method="post" id="formulario">
-        <fieldset>
-        <legend><strong style="text-transform:uppercase;">REPORT</strong></legend> 
+       
+        <legend><strong style="text-transform:uppercase;">relatório</strong></legend> 
         <?php
 
             if(isset($_SESSION['msg'])){
@@ -136,17 +136,18 @@
 
             
         
-
+            <div class="tit">
             <label for="msg" id="mensagem" class="tit">Mensagem: </label>
           
-            <textarea rows="1" cols="50" placeholder="Insira Mensagem..." id="msg" name="message"></textarea>
-        
+            <textarea rows="3" cols="15" placeholder="Insira Mensagem..." id="msg" name="message"></textarea>
+            </div>
     <div class="btn">
-        <button type="submit">Inserir</button>
+        <button type="submit">Enviar</button>
     </div>
   
-    </fieldset>
+  
     </form>
+
     <footer>
         <p>Copyright 2021 - by Hugo Resende Products </p>
         <p>

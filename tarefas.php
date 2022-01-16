@@ -1,5 +1,9 @@
 <?php
     session_start();
+    include 'gestor.php';
+    $gestor = new Gestor();
+
+    $tasks = $gestor->EXE_QUERY("SELECT * FROM tarefas");
 
 ?>
 
@@ -51,6 +55,29 @@
         
         </form>
     </div>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Tarefa</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach($tasks as $t): ?> 
+            <tr>
+            <th scope="row"><?php echo ($t['id'])  ?></th>
+            <td><?php echo ($t['titulo'])  ?></td>
+            <td><?php echo ($t['tarefa'])  ?></td>
+            <td style ="word-break:break-all;">
+                <a href="eliminar_confirmar.php?id=<?php echo $t['id'] ?> "class="btn btn-danger"> Eliminar </a></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+
 </div>
     
 </body>

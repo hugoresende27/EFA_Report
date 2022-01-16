@@ -8,10 +8,15 @@ $nome = filter_input(INPUT_POST,'nome', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
 $date = filter_input(INPUT_POST,'date');
 $msg = filter_input(INPUT_POST,'message', FILTER_SANITIZE_STRING);
+$ofensa = filter_input(INPUT_POST,'ofensa', FILTER_SANITIZE_STRING);
+$lagrimas = filter_input(INPUT_POST,'lagrimas', FILTER_SANITIZE_STRING);
+$esquecer = filter_input(INPUT_POST,'esquecer', FILTER_SANITIZE_STRING);
+$razao = filter_input(INPUT_POST,'razoes', FILTER_SANITIZE_STRING);
 
 //echo "NOME: $nome <br>EMAIL: $email";
 
-$res = "INSERT INTO queixas (nome,email,criada,data_queixa,msg) VALUES ('$nome' , '$email', NOW(), '$date','$msg')";
+$res = "INSERT INTO queixas (nome,email,criada,data_queixa,msg,ofensa,lagrimas,esquecer,razoes) 
+                    VALUES ('$nome' , '$email', NOW(), '$date','$msg','$ofensa','$lagrimas','$esquecer','$razao')";
 
 $res_queixa = mysqli_query($conn,$res);
 

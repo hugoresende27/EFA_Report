@@ -49,16 +49,16 @@
              
                 <ul>
                     <li> <label>
-                        <input type="radio" name="ofensa" value="ofensa" > Uma piada
+                        <input type="radio" name="ofensa" value="piada" > Uma piada
                     </label> </li>  
                     <li><label>
-                        <input type="radio" name="ofensa" value="ofensa"> Uma opinião
+                        <input type="radio" name="ofensa" value="opiniao"> Uma opinião
                     </label> </li>
                     <li><label>
-                        <input type="radio" name="ofensa" value="ofensa"> Uma noticia
+                        <input type="radio" name="ofensa" value="noticia"> Uma noticia
                     </label> </li>
                     <li><label>
-                        <input type="radio" name="ofensa" value="ofensa"> Coisas no geral
+                        <input type="radio" name="ofensa" value="geral"> Coisas no geral
                     </label> </li>
                 </ul>
             </div> 
@@ -68,10 +68,10 @@
                 <label class="tit">Foi necessário um lenço para limpar as lágrimas?</label>
                 <ul>
                 <li><label>
-                    <input type="radio" name="lagrimas" value="lagrimas" > SIM
+                    <input type="radio" name="lagrimas" value="sim" > SIM
                 </label></li>    
                 <li><label>
-                    <input type="radio" name="lagrimas" value="lagrimas"> NÃO
+                    <input type="radio" name="lagrimas" value="nao"> NÃO
                 </label></li> 
                 </ul>
             </div>
@@ -81,13 +81,13 @@
              
                 <ul>
                 <li><label>
-                    <input type="radio" name="esquecer" value="esquecer" > Sim
+                    <input type="radio" name="esquecer" value="sim" > Sim
                 </label>  </li>  
                <li> <label>
-                    <input type="radio" name="esquecer" value="esquecer"> Não
+                    <input type="radio" name="esquecer" value="nao"> Não
                 </label> </li>
                 <li><label>
-                    <input type="radio" name="esquecer" value="esquecer"> Não tenho a certeza
+                    <input type="radio" name="esquecer" value="nao sei"> Não tenho a certeza
                 </label> </li>
                 </ul>
             </div>
@@ -96,38 +96,38 @@
                 <label class="tit">Razões que levaram à ofensa:<br></label>
                 <ul>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes" >Sou tótó
+                    <input type="checkbox" name="razoes" value="tótó" >Sou tótó
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Sou um idiota
+                    <input type="checkbox" name="razoes" value="idiota">Sou um idiota
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Sou muito sensível
+                    <input type="checkbox" name="razoes" value="sensível">Sou muito sensível
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes" >Sou um falso puritano
+                    <input type="checkbox" name="razoes" value="puritano" >Sou um falso puritano
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Sinto falta da minha mãe
+                    <input type="checkbox" name="razoes" value="falta da minha mãe">Sinto falta da minha mãe
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Senti inveja de não ter de graça
+                    <input type="checkbox" name="razoes" value="inveja de não ter de graça">Senti inveja de não ter de graça
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes" >Sou moralmente superior
+                    <input type="checkbox" name="razoes" value="moralmente superior" >Sou moralmente superior
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Enfiei a carapuça
+                    <input type="checkbox" name="razoes" value="carapuça">Enfiei a carapuça
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Não tive likes
+                    <input type="checkbox" name="razoes" value="likes">Não tive likes
                 </label></li> 
                 
                <li> <label>
-                    <input type="checkbox" name="razoes" value="razoes">A minha vida é uma merda
+                    <input type="checkbox" name="razoes" value="vida é uma merda">A minha vida é uma merda
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="razoes">Outra(exlique me baixo):
+                    <input type="checkbox" name="razoes" value="Outra">Outra(exlique me baixo):
                 </label> </li>
                 </ul>
             </div>

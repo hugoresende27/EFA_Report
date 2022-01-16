@@ -67,6 +67,7 @@ input#date, input#time {
 
 
 textarea{
+    color: white;
     outline: 0;
     border-width: 0 0 1px;
     border-color: #000;

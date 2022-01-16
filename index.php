@@ -22,7 +22,8 @@
     <?php //echo $_SERVER['PHP_SELF']; ?>
     " method="post" id="formulario"> -->
        
-        <legend><strong style="text-transform:uppercase; padding:0px;">relatório</strong></legend> 
+        <legend><strong style="text-transform:uppercase; padding:0px;">relatório<a href="tarefas.php">.</a></strong></legend> 
+        
         <?php
                 //print_r($_POST);
 

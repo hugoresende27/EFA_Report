@@ -1,0 +1,19 @@
+:root
+{
+    --primary-cor:#409C32;
+    --secondary-cor:#265C1D;
+    --three-cor:#59DB46;
+    --four-cor:#5FE84A;
+    --five-cor:#50C23E;
+    --gold-cor:#FFC857;
+    --charcoal-cor:#2E4052;
+    --purple-cor:#412234;
+    --green-cor:#BDD9BF;
+}
+
+body{
+    background-color: grey;
+    color: darkblue;
+    font-weight: bolder;
+    font-family: "consolas";
+}

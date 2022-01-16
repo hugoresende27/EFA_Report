@@ -18,15 +18,23 @@
 <body>
 <div id="area">
     <form action="processa.php" method="post" id="formulario">
+    <!-- <form action="
+    <?php //echo $_SERVER['PHP_SELF']; ?>
+    " method="post" id="formulario"> -->
        
-        <legend><strong style="text-transform:uppercase;">relatório</strong></legend> 
+        <legend><strong style="text-transform:uppercase; padding:0px;">relatório</strong></legend> 
         <?php
+                //print_r($_POST);
 
             if(isset($_SESSION['msg'])){
+                
                 echo  $_SESSION['msg'];
                 unset($_SESSION['msg']);
             }
-
+            date_default_timezone_set("Europe/Lisbon");
+            $hoje = date("Y-m-d H:i:s");//MELHOR PARA BASE DE DADOS
+            echo "<p style='text-align:center'>".$hoje."</p>";
+          
 
         ?>
 
@@ -37,7 +45,7 @@
                 <label for="mail" class="tit">E-mail     </label> 
                 <input type="email"  name="email" id="mail"required placeholder="Insira o E-mail" class="linhas"> 
         </div>
-                <label for="date" class="tit" style="text-align:center">Data e Hora da Ofensa </label> 
+                <label for="date" class="tit perguntas" style="text-align:center">Data e Hora da Ofensa </label> 
                 <div style="text-align:center">
                     <input type="date" name="date" id="date" required>
                     <input type="time" name="time" id="time" required>
@@ -45,7 +53,7 @@
            
 
             <div>
-                <label class="tit">O que causou a sua ofensa?</label>
+                <label class="tit perguntas">O que causou a sua ofensa?</label>
              
                 <ul>
                     <li> <label>
@@ -65,7 +73,7 @@
 
 
             <div>
-                <label class="tit">Foi necessário um lenço para limpar as lágrimas?</label>
+                <label class="tit perguntas">Foi necessário um lenço para limpar as lágrimas?</label>
                 <ul>
                 <li><label>
                     <input type="radio" name="lagrimas" value="sim" > SIM
@@ -77,7 +85,7 @@
             </div>
 
             <div>
-                <label class="tit">Acha que consegue esquecer o assunto?</label>
+                <label class="tit perguntas">Acha que consegue esquecer o assunto?</label>
              
                 <ul>
                 <li><label>
@@ -93,41 +101,41 @@
             </div>
 
             <div id="razoes">
-                <label class="tit">Razões que levaram à ofensa:<br></label>
+                <label class="tit perguntas">Razões que levaram à ofensa:<br></label>
                 <ul>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="tótó" >Sou tótó
+                    <input type="checkbox" name="razoes[]" value="tótó" >Sou tótó
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="idiota">Sou um idiota
+                    <input type="checkbox" name="razoes[]" value="idiota">Sou um idiota
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="sensível">Sou muito sensível
+                    <input type="checkbox" name="razoes[]" value="sensível">Sou muito sensível
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="puritano" >Sou um falso puritano
+                    <input type="checkbox" name="razoes[]" value="puritano" >Sou um falso puritano
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="falta da minha mãe">Sinto falta da minha mãe
+                    <input type="checkbox" name="razoes[]" value="falta da minha mãe">Sinto falta da minha mãe
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="inveja de não ter de graça">Senti inveja de não ter de graça
+                    <input type="checkbox" name="razoes[]" value="inveja de não ter de graça">Senti inveja de não ter de graça
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="moralmente superior" >Sou moralmente superior
+                    <input type="checkbox" name="razoes[]" value="moralmente superior" >Sou moralmente superior
                 </label></li>    
                 <li><label>
-                    <input type="checkbox" name="razoes" value="carapuça">Enfiei a carapuça
+                    <input type="checkbox" name="razoes[]" value="carapuça">Enfiei a carapuça
                 </label></li> 
                 <li><label>
-                    <input type="checkbox" name="razoes" value="likes">Não tive likes
+                    <input type="checkbox" name="razoes[]" value="likes">Não tive likes
                 </label></li> 
                 
                <li> <label>
-                    <input type="checkbox" name="razoes" value="vida é uma merda">A minha vida é uma merda
+                    <input type="checkbox" name="razoes[]" value="vida é uma merda">A minha vida é uma merda
                 </label> </li>
                 <li><label>
-                    <input type="checkbox" name="razoes" value="Outra">Outra(exlique me baixo):
+                    <input type="checkbox" name="razoes[]" value="Outra">Outra(exlique me baixo):
                 </label> </li>
                 </ul>
             </div>
@@ -137,13 +145,14 @@
             
         
             <div class="tit">
-            <label for="msg" id="mensagem" class="tit">Mensagem: </label>
+            <label for="msg" id="mensagem" class="tit perguntas">Mensagem: </label>
           
             <textarea rows="3" cols="15" placeholder="Insira Mensagem..." id="msg" name="message"></textarea>
             </div>
     <div class="btn">
         <button type="submit">Enviar</button>
     </div>
+  
   
   
     </form>

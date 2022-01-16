@@ -54,7 +54,7 @@ legend {
 input.linhas {
     color: white;
     text-align: center;
-    width: fit-content;
+    width: 250px;
     outline: 0;
     border-width: 0 0 2px;
     border-color: #000;
@@ -76,10 +76,15 @@ textarea{
 
 .tit {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-weight: 900;
-    line-height: 2rem;
+    line-height: 1rem;
     cursor: default;
+}
+.perguntas{
+    font-family: 'Consolas';
+    font-size: large;
+    color: greenyellow;
 }
 
 button {

@@ -12,11 +12,12 @@ $date = filter_input(INPUT_POST,'date');
 
 $res = "INSERT INTO queixas (nome,email,criada,data_queixa) VALUES ('$nome' , '$email', NOW(), '$date')";
 
-$res_queixa = mysqli_query($conn,$res);
+//$res_queixa = mysqli_query($conn,$res);
 
 if (mysqli_insert_id($conn)){
     $_SESSION['msg']="<p style='color:green'>Queixa registada com sucesso!</p>";
     header("location: index.php");
 }else {
+    $_SESSION['msg']="<p style='color:red'>Queixa não registada</p>";
     header("location: index.php");
 }
